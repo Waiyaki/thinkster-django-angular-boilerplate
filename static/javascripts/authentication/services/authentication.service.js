@@ -104,7 +104,7 @@
             function logoutSuccessFn(data, status, headers, config) {
                 Authentication.unauthenticate();
 
-                window.location('/');
+                window.location = '/';
             }
 
             function logoutErrorFn(data, status, headers, config) {
