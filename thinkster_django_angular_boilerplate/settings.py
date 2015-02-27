@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'compressor',
     'authentication',
+    'posts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -72,7 +73,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
