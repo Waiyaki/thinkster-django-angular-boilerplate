@@ -16,3 +16,4 @@ dist/
 # Staticfiles
 staticfiles/
 *.sublime-*
+issues.txt
