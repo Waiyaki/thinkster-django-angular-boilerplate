@@ -10,7 +10,8 @@
             getAuthenticatedAccount: getAuthenticatedAccount,
             isAuthenticated: isAuthencticated,
             setAuthenticatedAccount: setAuthenticatedAccount,
-            unauthenticate: unauthenticate
+            unauthenticate: unauthenticate,
+            logout: logout
         }
 
         return Authentication;
@@ -66,6 +67,18 @@
         function unauthenticate(){
             delete $cookies.authenticatedAccount;
 
+        }
+
+        function logout(){
+            return $http.post('/api/v1/auth/logout/').then(
+                    function(data, status, headers, config){
+                // Logout success function
+                Authentication.unauthenticate();
+                window.location = '/';
+            }, function(data, status, headers, config){
+                // Logout out error fn
+                console.log('Epic Failure!');
+            });
         }
     }]);
 
