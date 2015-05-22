@@ -5,7 +5,7 @@
         .factory('Profile', ['$http', function($http){
             return {
                 destroy: function(profile){
-                    return $http.delete('/api/v1/accounts/' + profile.id + '/');
+                    return $http.delete('/api/v1/accounts/' + profile.username + '/');
                 },
                 get: function(username){
                     return $http.get('/api/v1/accounts/' + username + '/');
