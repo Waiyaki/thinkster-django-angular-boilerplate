@@ -28,7 +28,6 @@
             }, function(data, status, headers, config){
                 // Registration failed
                 console.log('Epic Failure!');
-                console.log(data);
             });
         }
 
@@ -45,7 +44,6 @@
             }, function(data, status, headers, config){
                 // Login failure function.
                 console.log("Epic Failure!");
-                console.log(data)
             });
         }
 

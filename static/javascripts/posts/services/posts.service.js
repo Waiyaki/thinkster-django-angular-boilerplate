@@ -1,0 +1,22 @@
+(function(){
+    'use strict';
+
+    angular.module('thinkster.posts.services')
+        .factory('Posts', ['$http', function($http){
+            return {
+                all: function(){
+                    return $http.get('/api/v1/posts/');
+                },
+
+                create: function(content){
+                    return $http.post('/api/v1/posts/', {
+                        content: content
+                    });
+                },
+
+                get: function(username){
+                    return $http.get('/api/v1/accounts/'+ username + '/posts/');
+                }
+            };
+        }]);
+})();
