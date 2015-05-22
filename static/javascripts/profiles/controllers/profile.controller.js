@@ -16,6 +16,8 @@
                     Profile.get(username).then(function(data, status, headers, config){
                         vm.profile = data.data;
                     }, function(data, status, headers, config){
+                        console.log(data.data);
+                        console.log(status)
                         $location.path('/');
                         Snackbar.error('That user does not exist');
                     });
@@ -23,7 +25,8 @@
                     Posts.get(username).then(function(data, status, headers, config){
                         vm.posts = data.data;
                     }, function(data, status, headers, config){
-                        Snackbar.error(data.data.error)
+                        Snackbar.error(data.data.error);
+                        console.log(data.data);
                     });
                 }
 
